@@ -9,15 +9,15 @@ const finals2014 = fifaData.filter(function(item){
  });
 //  console.log('task 1 ', finals2014);
 //(a) Home Team name for 2014 world cup final
-console.log(finals2014[0]['Home Team Name']);
+// console.log(finals2014[0]['Home Team Name']);
 //(b) Away Team name for 2014 world cup final
-console.log(finals2014[0]['Away Team Name']);
+// console.log(finals2014[0]['Away Team Name']);
 //(c) Home Team goals for 2014 world cup final
-
+// console.log(finals2014[0]['Home Team Goals']);
 //(d) Away Team goals for 2014 world cup final
-
+// console.log(finals2014[0]['Away Team Goals']);
 //(e) Winner of 2014 world cup final */
-
+// console.log(finals2014[0]['Win conditions']);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use getFinals to do the following:
@@ -42,10 +42,13 @@ Use the higher-order function called getYears to do the following:
 2. Receive a callback function getFinals from task 2 
 3. Return an array called years containing all of the years in the getFinals data set*/
 
-function getYears(/* code here */) {
-    /* code here */
+function getYears(array, getFinalsCB) {
+    return getFinalsCB(array).map(function(item){
+        return item.Year;
+    });
+    
 }
-
+console.log(getYears(fifaData, getFinals))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
